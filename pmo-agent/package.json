@@ -1,0 +1,9 @@
+{
+  "name": "pmo-agent",
+  "version": "1.0.0",
+  "description": "PMO Agent API",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  }
+}
