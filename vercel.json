@@ -3,10 +3,10 @@
   "name": "pmo-agent",
   "builds": [
     { "src": "pmo-agent/api/*.js",   "use": "@vercel/node" },
-    { "src": "pmo-agent",            "use": "@vercel/static" }
+    { "src": "pmo-agent/index.html", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/pmo-agent/api/$1" },
-    { "src": "/(?!api)",  "dest": "/index.html" }
+    { "src": "/api/(.*)", "dest": "/pmo-agent/api/$1.js" },
+    { "src": "/.*",       "dest": "/pmo-agent/index.html" }
   ]
 }
