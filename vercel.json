@@ -7,6 +7,6 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/pmo-agent/api/$1" },
-    { "src": "/(.*)",     "dest": "/pmo-agent/index.html" }
+    { "src": "/(?!api)",  "dest": "/index.html" }
   ]
 }
