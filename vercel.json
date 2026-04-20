@@ -1,11 +1,12 @@
 {
   "version": 2,
   "name": "pmo-agent",
-  "public": "pmo-agent",
-  "buildCommand": "echo 'No build needed'",
-  "outputDirectory": "pmo-agent",
+  "builds": [
+    { "src": "pmo-agent/api/*.js", "use": "@vercel/node" },
+    { "src": "pmo-agent/index.html", "use": "@vercel/static" }
+  ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/pmo-agent/api/$1.js" },
-    { "src": "/(.*)", "dest": "/pmo-agent/index.html" }
+    { "src": ".*", "dest": "/pmo-agent/index.html" }
   ]
 }
